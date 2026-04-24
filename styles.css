@@ -12,14 +12,6 @@ body {
   padding: 20px;
 }
 
-.project-meta,
-.controls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
-}
-
 .header {
   display: flex;
   gap: 10px;
@@ -42,9 +34,12 @@ body {
   filter: brightness(0.95);
 }
 
-.project-meta input {
-  min-width: 220px;
-  flex: 1;
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 input,
@@ -164,4 +159,12 @@ select {
   height: 100%;
   background: var(--green);
   width: 0%;
+}
+
+.imputs {
+  display: flex;
+  gap: 10px;
+}
+.reminders {
+    margin-block: 32px;
 }
