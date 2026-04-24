@@ -42,6 +42,42 @@ body {
   flex-wrap: wrap;
 }
 
+.project-switcher,
+.project-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.project-tab,
+#addProjectBtn {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: #2d342d;
+  cursor: pointer;
+}
+
+.project-tab.active {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+
+#addProjectBtn {
+  border-color: var(--green);
+}
+
 input,
 select {
   padding: 6px;
@@ -161,10 +197,6 @@ select {
   width: 0%;
 }
 
-.imputs {
-  display: flex;
-  gap: 10px;
-}
 .reminders {
-    margin-block: 32px;
+  margin-block: 32px;
 }

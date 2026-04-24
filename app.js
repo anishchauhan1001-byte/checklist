@@ -34,10 +34,10 @@ const data = [
         d: "48 hrs"
       },
        {
-        text: "Project Manager (PM) and Deputy-PM (DPM) designated by PMG ",
+       text: "Project Manager (PM) and Deputy-PM (DPM) designated by PMG ",
         p: "PMG ",
         d: "48 hrs"
-      },,
+      },
        {
         text: "Reviewer assigned to project by PMG  ",
         p: "PMG ",
@@ -419,18 +419,145 @@ const data = [
   }
 ];
 
-let state = {};
-try {
-  state = JSON.parse(localStorage.getItem("iora_full")) || {};
-} catch {
-  state = {};
+const storageKey = "iora_full";
+let projects = {};
+let currentProjectId = "";
+
+function createProjectObject(index, savedProject = {}) {
+  const safeProject = savedProject && typeof savedProject === "object" && !Array.isArray(savedProject)
+    ? savedProject
+    : {};
+
+  return {
+    name: typeof safeProject.name === "string" && safeProject.name.trim()
+      ? safeProject.name
+      : `Project ${index}`,
+    code: typeof safeProject.code === "string" ? safeProject.code : "",
+    items: safeProject.items && typeof safeProject.items === "object" && !Array.isArray(safeProject.items)
+      ? safeProject.items
+      : {}
+  };
 }
 
+function getProjectIds() {
+  return Object.keys(projects);
+}
+
+function ensureProjects() {
+  const ids = getProjectIds();
+
+  if (!ids.length) {
+    currentProjectId = "project-1";
+    projects[currentProjectId] = createProjectObject(1);
+    return;
+  }
+
+  ids.forEach((id, index) => {
+    projects[id] = createProjectObject(index + 1, projects[id]);
+  });
+
+  if (!projects[currentProjectId]) {
+    currentProjectId = ids[0];
+  }
+}
+
+function getActiveProject() {
+  ensureProjects();
+  return projects[currentProjectId];
+}
+
+function getActiveItems() {
+  return getActiveProject().items;
+}
+
+try {
+  const savedData = JSON.parse(localStorage.getItem(storageKey)) || {};
+
+  if (savedData && typeof savedData === "object" && !Array.isArray(savedData)) {
+    if (savedData.projects && typeof savedData.projects === "object" && !Array.isArray(savedData.projects)) {
+      projects = savedData.projects;
+      currentProjectId = savedData.currentProjectId || "";
+    } else if ("items" in savedData || "projectName" in savedData || "projectCode" in savedData) {
+      currentProjectId = "project-1";
+      projects[currentProjectId] = createProjectObject(1, {
+        name: savedData.projectName,
+        code: savedData.projectCode,
+        items: savedData.items
+      });
+    } else {
+      currentProjectId = "project-1";
+      projects[currentProjectId] = createProjectObject(1, {
+        items: savedData
+      });
+    }
+  }
+} catch {
+  projects = {};
+}
+
+ensureProjects();
+
 function save() {
-  localStorage.setItem("iora_full", JSON.stringify(state));
+  localStorage.setItem(storageKey, JSON.stringify({
+    currentProjectId,
+    projects
+  }));
+}
+
+function getProjectLabel(project, index) {
+  return project.name.trim() || `Project ${index + 1}`;
+}
+
+function renderProjectTabs() {
+  const tabs = getProjectIds().map((id, index) => {
+    const project = projects[id];
+    const label = getProjectLabel(project, index);
+    const activeClass = id === currentProjectId ? "active" : "";
+
+    return `<button type="button" class="project-tab ${activeClass}" onclick="switchProject('${id}')">${label}</button>`;
+  }).join("");
+
+  document.getElementById("projectTabs").innerHTML = tabs;
+}
+
+function syncProjectDetails() {
+  const project = getActiveProject();
+  project.name = document.getElementById("projectName").value.trim() || getProjectLabel(project, getProjectIds().indexOf(currentProjectId));
+  project.code = document.getElementById("projectCode").value;
+  save();
+  renderProjectTabs();
+}
+
+function loadProjectDetails() {
+  const project = getActiveProject();
+  document.getElementById("projectName").value = project.name;
+  document.getElementById("projectCode").value = project.code;
+}
+
+function switchProject(projectId) {
+  if (!projects[projectId]) {
+    return;
+  }
+
+  currentProjectId = projectId;
+  save();
+  loadProjectDetails();
+  render();
+}
+
+function createProject() {
+  const projectNumber = getProjectIds().length + 1;
+  const projectId = `project-${Date.now()}`;
+
+  projects[projectId] = createProjectObject(projectNumber);
+  currentProjectId = projectId;
+  save();
+  loadProjectDetails();
+  render();
 }
 
 function toggle(i, j) {
+  const state = getActiveItems();
   const k = i + "_" + j;
   state[k] = state[k] || {};
   state[k].done = !state[k].done;
@@ -439,6 +566,7 @@ function toggle(i, j) {
 }
 
 function risk(i, j) {
+  const state = getActiveItems();
   const k = i + "_" + j;
   state[k] = state[k] || {};
   state[k].risk = !state[k].risk;
@@ -446,6 +574,7 @@ function risk(i, j) {
   render();
 }
 function clearChecked() {
+  const state = getActiveItems();
   Object.keys(state).forEach((key) => {
     if (!state[key]?.done) {
       return;
@@ -463,6 +592,7 @@ function clearChecked() {
 }
 
 function render() {
+  const state = getActiveItems();
   const s = document.getElementById("search").value.toLowerCase();
   const pf = document.getElementById("priorityFilter").value;
   const sf = document.getElementById("statusFilter").value;
@@ -516,16 +646,22 @@ ${items}
   }).join("");
 
   document.getElementById("app").innerHTML = html;
+  renderProjectTabs();
 
   const pct = total ? Math.round((done / total) * 100) : 0;
   document.getElementById("fill").style.width = pct + "%";
  document.getElementById("ptext").innerText = `${done}/${total} (${pct}%)`;
 }
 
+loadProjectDetails();
+
+document.getElementById("projectName").oninput = syncProjectDetails;
+document.getElementById("projectCode").oninput = syncProjectDetails;
 document.getElementById("search").oninput = render;
 document.getElementById("priorityFilter").onchange = render;
 document.getElementById("statusFilter").onchange = render;
 document.getElementById("clearCheckedBtn").onclick = clearChecked;
+document.getElementById("addProjectBtn").onclick = createProject;
 
 
 render();
