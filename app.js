@@ -4,360 +4,430 @@ const data = [
     subheading: "1A - Contract Signing & Team Assignment",
     items: [
       {
-        text: "Contract signature sheet filled, signed by Origination Lead, Admin & Finance",
-        p: "important",
-        d: "48 hrs"
+        text: "Contract signature sheet filled, signed by Proposal Lead, Admin & Finance",
+        p: "Proposal Lead ",
+        d: "At signing "
       },
       {
-        text: "Head of Finance obtains CEO/Director signature",
-        p: "critical",
-        d: "Kickoff"
+        text: "Obtain CEO/Director signature",
+        p: "Head of Finance ",
+        d: "At signing "
       },
       {
         text: "Documents shared with Admin, Finance, PMG, and Directors",
-        p: "important",
-        d: "48 hrs"
+        p: "Head of Finance",
+        d: "At signing "
       },
       {
         text: "Admin retains one contract copy; sends one to client",
-        p: "important",
+        p: "Admin",
+        d: "At signing "
+      },
+      {
+        text: "Allocate project code",
+        p: "Finance ",
+        d: "At signing"
+      },
+      {
+        text: "Proposal document & contract forwarded to PMG ",
+        p: "Proposal Lead ",
+        d: "48 hrs"
+      },
+       {
+        text: "Project Manager (PM) and Deputy-PM (DPM) designated by PMG ",
+        p: "PMG ",
+        d: "48 hrs"
+      },,
+       {
+        text: "Reviewer assigned to project by PMG  ",
+        p: "PMG ",
+        d: "48 hrs"
+      },
+       {
+        text: "Final proposal, deliverable schedule & budget transferred to PM  ",
+        p: "Proposal Lead ",
         d: "48 hrs"
       },
       {
-        text: "Finance allocates unique project code",
-        p: "important",
-        d: "48 hrs"
-      },
-      {
-        text: "Admin retains one contract copy; sends one to client",
-        p: "important",
-        d: "48 hrs"
-      },
-      {
-        text: "Finance allocates unique project code",
-        p: "routine",
+        text: "PM prepares short write-up/PPT on project for Proposal/Comms teams ",
+        p: "PM",
         d: "Week 1"
       }
     ]
   },
   {
-    phase: "Inception - Internal",
-    subheading: "Internal kickoff and systems setup",
+    phase: "Project Handover",
+    subheading: "1B — Consultant Management (if applicable) ",
     items: [
       {
-        text: "Conduct internal kickoff meeting",
-        p: "critical",
+        text: "PM provides SOW to HR for consultant contract preparation",
+        p: "PM + HR ",
+        d: "Week 1 "
+      },
+      {
+        text: "First draft of consultant contract shared with consultant",
+        p: "HR  ",
+        d: "14 days "
+      },
+      {
+        text: "HR shares timesheet and invoice templates with consultants",
+        p: "HR  ",
+        d: "At contract start "
+      },
+      {
+        text: "Timesheet management and verification process set up",
+        p: "HR ",
+        d: "At contract start "
+      },
+      {
+        text: "Process for billing and travel reimbursement communicated to consultants ",
+        p: "HR  ",
+        d: "At contract start "
+      }
+    ]
+  },
+  {
+    phase: "Project Inception",
+    subheading: "2A — Internal Kick-off & Pre-Inception Meeting ",
+    items: [
+      {
+        text: "Kick-off meeting scheduled (all teams, PMG, Comms, back-office) ",
+        p: "PM ",
         d: "14 days"
       },
       {
-        text: "Present project plan and timelines",
-        p: "critical",
-        d: "Kickoff"
-      },
-      {
-        text: "Communicate procurement and HR needs",
-        p: "important",
-        d: "Kickoff"
-      },
-      {
-        text: "Create Teams group",
-        p: "important",
-        d: "Post"
-      },
-      {
-        text: "Set up channels and planner",
-        p: "routine",
-        d: "Post"
-      },
-      {
-        text: "Create SharePoint structure",
-        p: "routine",
-        d: "Post"
-      },
-      {
-        text: "Define naming protocol",
-        p: "routine",
-        d: "Post"
-      },
-      {
-        text: "Enter deliverables into system",
-        p: "important",
-        d: "Post"
-      },
-      {
-        text: "Set milestone alerts",
-        p: "important",
-        d: "Post"
-      },
-      {
-        text: "Enable MS Loop if needed",
-        p: "routine",
-        d: "NA"
-      }
-    ]
-  },
-  {
-    phase: "Inception - Internal",
-    subheading: "Internal review and readiness checks",
-    items: [
-      {
-        text: "Conduct internal kickoff meeting",
-        p: "critical",
+        text: "Inception presentation prepared (objectives, plan, ToC, resources, risks) ",
+        p: "PM ",
         d: "14 days"
       },
       {
-        text: "Present project plan and timelines",
-        p: "critical",
-        d: "Kickoff"
+        text: "Timelines including financially-linked milestones shared ",
+        p: "PM ",
+        d: "At meeting"
       },
       {
-        text: "Communicate procurement and HR needs",
-        p: "important",
-        d: "Kickoff"
+        text: "Procurement and HR needs communicated to Admin, Finance, HR, IT ",
+        p: "PM ",
+        d: "At meeting"
       },
       {
-        text: "Create Teams group",
-        p: "important",
-        d: "Post"
+        text: "MS Teams (or equivalent) workspace created with project channels ",
+        p: "PM ",
+        d: "Post-meeting "
       },
       {
-        text: "Set up channels and planner",
-        p: "routine",
-        d: "Post"
+        text: "All team members added to Teams; folder structure set up per IT template ",
+        p: "PM ",
+        d: "Post-meeting "
       },
       {
-        text: "Create SharePoint structure",
-        p: "routine",
-        d: "Post"
+        text: "Document naming protocol established and communicated to all",
+        p: "PM ",
+        d: "Post-meeting "
       },
       {
-        text: "Define naming protocol",
-        p: "routine",
-        d: "Post"
+        text: "All deliverables, deadlines, and work plans entered in project mgmt system ",
+        p: "PM ",
+        d: "Post-meeting "
       },
       {
-        text: "Enter deliverables into system",
-        p: "important",
-        d: "Post"
+        text: "Task list created covering all project stages and invoicing dates ",
+        p: "PM ",
+        d: "Post-meeting "
       },
       {
-        text: "Set milestone alerts",
-        p: "important",
-        d: "Post"
+        text: "MS Loop set up (for multi-location or large teams) ",
+        p: "PM ",
+        d: "If applicable "
+      }
+    ]
+  },
+
+  {
+    phase: "Project Inception",
+    subheading: "2B — Client / External Inception ",
+    items: [
+      {
+        text: "Client inception meeting scheduled ",
+        p: "PM / DPM ",
+        d: "7 days of PO "
       },
       {
-        text: "Enable MS Loop if needed",
-        p: "routine",
-        d: "NA"
+        text: "Client presentation prepared (objectives, plan, field plan, data needs)  ",
+        p: "PM ",
+        d: "Before meeting"
+      },
+      {
+        text: "Inception report prepared (detailed for client, brief for internal) ",
+        p: "PM ",
+        d: "Post-meeting "
+      },
+      {
+        text: "WhatsApp group created with client and partners (for informal updates)  ",
+        p: "PM ",
+        d: "At inception "
+      },
+      {
+        text: "Launch workshop organised if required (refer to Events SOP) ",
+        p: "PM ",
+        d: "If applicable "
       }
     ]
   },
   {
-    phase: "Inception - Client",
-    subheading: "Client kickoff and communication alignment",
+    phase: "Phase 3: Project Implementation ",
+    subheading: "3A — Ongoing Project Management ",
     items: [
       {
-        text: "Schedule client inception meeting",
-        p: "critical",
-        d: "7 days"
+        text: "PM/DPM attends all client meetings with at least one Research Associate ",
+        p: "PM / DPM ",
+        d: "Each meeting"
       },
       {
-        text: "Prepare presentation",
-        p: "important",
-        d: "Meeting"
+        text: "Meeting minutes/summary circulated to team and sent to CEO ",
+        p: "PM",
+        d: "Within 24 hours"
       },
       {
-        text: "Share inception report",
-        p: "important",
-        d: "Post"
+        text: "Recurring team meetings and milestone alerts set up on calendar/Teams ",
+        p: "PM ",
+        d: "At start  "
       },
       {
-        text: "Share internal summary",
-        p: "routine",
-        d: "Post"
+        text: "Clarity on task objectives and timelines confirmed with each team member ",
+        p: "PM ",
+        d: "Ongoing "
       },
-      {
-        text: "Define communication protocol",
-        p: "critical",
-        d: "Ongoing"
+        {
+        text: "Team workload monitored; overburdening escalated to Team Lead  ",
+        p: "PM ",
+        d: "Ongoing "
       },
-      {
-        text: "Create WhatsApp group if needed",
-        p: "routine",
-        d: "NA"
+        {
+        text: "Team using shared files on MS SharePoint/Teams  ",
+        p: "PM ",
+        d: "Ongoing "
       },
-      {
-        text: "Plan launch workshop if required",
-        p: "routine",
-        d: "NA"
+        {
+        text: "Comms templates used for all deliverables  ",
+        p: "All team ",
+        d: "Ongoing "
+      },
+        {
+        text: "Any new team members added to Teams and given document access  ",
+        p: "PM ",
+        d: "Ongoing "
+      },
+        {
+        text: "Project Management Planner updated regularly  ",
+        p: "PM ",
+        d: "Ongoing "
       }
     ]
   },
   {
-    phase: "Consultant Management",
-    subheading: "Contracts, billing and oversight",
+    phase: "Phase 3: Project Implementation ",
+    subheading: "3B — Fieldwork Preparation (if applicable) ",
     items: [
       {
-        text: "Prepare SOW and initiate contract",
-        p: "critical",
-        d: "14 days"
+        text: "Fieldwork planned in advance; Admin informed for travel/accommodation",
+        p: "PM/ Field Team Lead ",
+        d: "In advance "
       },
       {
-        text: "Share billing templates",
-        p: "important",
-        d: "Week 1"
+        text: "Pre-field team meeting held with clear communication protocol ",
+        p: "PM/ Field Team Lead ",
+        d: "Before field "
       },
       {
-        text: "Approve timesheets",
-        p: "important",
-        d: "Monthly"
+        text: "Field plan shared with clients and partners; permissions obtained ",
+        p: "PM/ Field Team Lead ",
+        d: "Before field "
       },
       {
-        text: "Notify contract changes",
-        p: "critical",
-        d: "NA"
+        text: "All team members briefed on objectives, itinerary, and data protocols ",
+        p: "PM/ Field Team Lead ",
+        d: "Before field "
+      },
+      {
+        text: "All field documents accessible to team members (Teams/shared folder) ",
+        p: "PM/ Field Team Lead ",
+        d: "Before field "
+      },
+      {
+        text: "Digital tools set up for field data collection (IT team tools) ",
+        p: "PM/ Field Team Lead + IT ",
+        d: "Before field "
+      },
+      {
+        text: "Fieldwork budget tracked and managed ",
+        p: "PM ",
+        d: "During field"
+      },
+      {
+        text: "Data quality checks conducted regularly during fieldwork ",
+        p: "PM ",
+        d: "During field"
       }
     ]
   },
   {
-    phase: "Project Implementation",
-    subheading: "Execution, monitoring and milestone control",
+    phase: "Phase 3: Project Implementation ",
+    subheading: "3C — Technical Review ",
     items: [
       {
-        text: "Attend client meetings",
-        p: "critical",
-        d: "Ongoing"
+        text: "All major deliverables sent to designated Reviewer before submission ",
+        p: "PM ",
+        d: "Per milestone "
       },
       {
-        text: "Define team responsibilities",
-        p: "critical",
-        d: "Ongoing"
+        text: "Review timelines agreed upon between PM and Reviewer ",
+        p: "PM + Reviewer ",
+        d: "Per milestone "
       },
       {
-        text: "Monitor workload",
-        p: "important",
-        d: "Ongoing"
+        text: "For tight deadlines: walkthrough meeting with Reviewer organised ",
+        p: "PM ",
+        d: "If needed "
       },
       {
-        text: "Ensure shared file usage",
-        p: "important",
-        d: "Ongoing"
-      },
-      {
-        text: "Use approved templates",
-        p: "routine",
-        d: "Start"
-      },
-      {
-        text: "Plan and execute fieldwork",
-        p: "critical",
-        d: "Pre-field"
-      },
-      {
-        text: "Ensure deliverable reviews",
-        p: "critical",
-        d: "Milestone"
-      },
-      {
-        text: "Track financial milestones",
-        p: "important",
-        d: "Ongoing"
-      },
-      {
-        text: "Escalate risks",
-        p: "critical",
-        d: "As needed"
-      },
-      {
-        text: "Trigger invoices",
-        p: "important",
-        d: "Milestone"
+        text: "Reviewer feedback incorporated and document finalised ",
+        p: "PM + Team ",
+        d: "Pre-submission "
       }
     ]
   },
   {
-    phase: "Project Completion",
-    subheading: "Closeout, feedback and knowledge capture",
+    phase: "Phase 3: Project Implementation ",
+    subheading: "3D — Crisis & Risk Management  ",
     items: [
       {
-        text: "Inform all teams of completion",
-        p: "important",
-        d: "Close"
+        text: "Any delay or issue reported to PMG via email immediately ",
+        p: "PM",
+        d: "Within 48 hrs "
       },
       {
-        text: "Archive project files",
-        p: "important",
-        d: "Close"
+        text: "Urgent PMG meeting organised to assess next steps ",
+        p: "PMG + PM",
+        d: "Immediately "
       },
       {
-        text: "Conduct performance review",
-        p: "important",
-        d: "Close"
+        text: "Resource reallocation or additional resources arranged as needed ",
+        p: "PMG + PM ",
+        d: "Urgently "
       },
       {
-        text: "Update project write-up",
-        p: "routine",
-        d: "Close"
+        text: "Client informed of delays and potential extensions ",
+        p: "PM",
+        d: "As needed "
+      }
+    ]
+  },
+  {
+    phase: "Phase 3: Project Implementation ",
+    subheading: "3E — Invoicing & Financial Milestones  ",
+    items: [
+      {
+        text: "All financially-linked deliverables entered in PM Planner and marked to Finance ",
+        p: "PM ",
+        d: "At start "
       },
       {
-        text: "Collect client feedback",
-        p: "critical",
-        d: "2 weeks"
+        text: "Finance sends first reminder to PM (date-based invoicing) ",
+        p: "Finance",
+        d: "10 days before "
       },
       {
-        text: "Obtain completion certificate",
-        p: "critical",
-        d: "2 weeks"
+        text: "Finance sends second reminder to PM (date-based invoicing) ",
+        p: "Finance",
+        d: "5 days before "
       },
       {
-        text: "Plan dissemination",
-        p: "routine",
-        d: "2 weeks"
+        text: "PM notifies Finance upon deliverable submission (deliverable-based) ",
+        p: "PM ",
+        d: "At submission "
+      },
+      {
+        text: "Invoice approvals obtained and invoice raised ",
+        p: "Finance + PM ",
+        d: "Per milestone "
+      }
+    ]
+  },
+  {
+    phase: "Phase 4: Project Closure ",
+    subheading: "4A — Internal Closure  ",
+    items: [
+      {
+        text: "Project closed by Finance upon receipt of final payment; PMG informed ",
+        p: "Finance",
+        d: "At final payment "
+      },
+      {
+        text: "PMG, Admin, Communications, HR, and Proposals informed of completion ",
+        p: "PM ",
+        d: "At completion "
+      },
+      {
+        text: "All project files archived in inception SharePoint folder ",
+        p: "PM ",
+        d: "At completion"
+      },
+      {
+        text: "Link to archived folder shared with IT for further archiving ",
+        p: "PM ",
+        d: "At completion "
+      },
+      {
+        text: "Project description write-up updated with key outcomes (for future proposals/ website)  ",
+        p: "PM ",
+        d: "At completion "
+      },
+      {
+        text: "Formal performance review of all team members conducted  ",
+        p: "PM + HR  ",
+        d: "At completion "
+      },
+
+      {
+        text: "Performance reviews forwarded to HR and respective reporting managers ",
+        p: "HR ",
+        d: "Post-review "
+      },
+       {
+        text: "Discussion with PMG & Comms on articles/blogs/dissemination events  ",
+        p: "PM + Comms ",
+        d: "If applicable "
+      }
+    ]
+  },
+  {
+    phase: "Phase 4: Project Closure  ",
+    subheading: "4B — Client Closure   ",
+    items: [
+      {
+        text: "Client feedback and testimonials requested (use Annexure I template)  ",
+        p: "PM ",
+        d: "2 weeks  "
+      },
+      {
+        text: "Project Completion Certificate obtained from client (use Annexure II template) ",
+        p: "PM / Proposals ",
+        d: "2 weeks  "
       }
     ]
   }
 ];
 
-const storageKey = "iora_full";
-let projectDetails = {
-  name: "",
-  code: ""
-};
 let state = {};
-
 try {
-  const savedData = JSON.parse(localStorage.getItem(storageKey)) || {};
-
-  if (savedData && typeof savedData === "object" && !Array.isArray(savedData)) {
-    if ("items" in savedData || "projectName" in savedData || "projectCode" in savedData) {
-      projectDetails.name = savedData.projectName || "";
-      projectDetails.code = savedData.projectCode || "";
-      state = savedData.items || {};
-    } else {
-      state = savedData;
-    }
-  }
+  state = JSON.parse(localStorage.getItem("iora_full")) || {};
 } catch {
   state = {};
 }
 
 function save() {
-  localStorage.setItem(storageKey, JSON.stringify({
-    projectName: projectDetails.name,
-    projectCode: projectDetails.code,
-    items: state
-  }));
-}
-
-function syncProjectDetails() {
-  projectDetails.name = document.getElementById("projectName").value;
-  projectDetails.code = document.getElementById("projectCode").value;
-  save();
-}
-
-function loadProjectDetails() {
-  document.getElementById("projectName").value = projectDetails.name;
-  document.getElementById("projectCode").value = projectDetails.code;
+  localStorage.setItem("iora_full", JSON.stringify(state));
 }
 
 function toggle(i, j) {
@@ -375,7 +445,6 @@ function risk(i, j) {
   save();
   render();
 }
-
 function clearChecked() {
   Object.keys(state).forEach((key) => {
     if (!state[key]?.done) {
@@ -453,13 +522,11 @@ ${items}
  document.getElementById("ptext").innerText = `${done}/${total} (${pct}%)`;
 }
 
-loadProjectDetails();
-
-document.getElementById("projectName").oninput = syncProjectDetails;
-document.getElementById("projectCode").oninput = syncProjectDetails;
 document.getElementById("search").oninput = render;
 document.getElementById("priorityFilter").onchange = render;
 document.getElementById("statusFilter").onchange = render;
 document.getElementById("clearCheckedBtn").onclick = clearChecked;
 
+
 render();
+
