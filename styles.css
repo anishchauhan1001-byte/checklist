@@ -1,0 +1,167 @@
+:root {
+  --green: #5f6f2f;
+  --bg: #f5f7f2;
+  --card: #fff;
+  --muted: #6b736b;
+  --border: #e2e6dc;
+}
+
+body {
+  font-family: Arial;
+  background: var(--bg);
+  padding: 20px;
+}
+
+.project-meta,
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#clearCheckedBtn {
+  padding: 8px 14px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+#clearCheckedBtn:hover {
+  filter: brightness(0.95);
+}
+
+.project-meta input {
+  min-width: 220px;
+  flex: 1;
+}
+
+input,
+select {
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.phase {
+  background: var(--card);
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.phase-header {
+  padding: 10px;
+  background: #eef2e8;
+  border-bottom: 1px solid var(--border);
+  border-radius: 10px 10px 0 0;
+}
+
+.phase-title {
+  font-weight: bold;
+}
+
+.phase-subtitle {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+  align-items: center;
+}
+
+.item:hover {
+  background: #f7f9f4;
+}
+
+.checkbox {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #aaa;
+  cursor: pointer;
+}
+
+.checked {
+  background: var(--green);
+}
+
+.text.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+.critical {
+  background: #ffdede;
+}
+
+.important {
+  background: #fff4cc;
+}
+
+.routine {
+  background: #e6f5e6;
+}
+
+.risk {
+  margin-left: 4px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.risk.active {
+  color: red;
+}
+
+.deadline {
+  font-size: 10px;
+  background: #eef3e7;
+  padding: 2px 5px;
+  border-radius: 8px;
+  width: 84px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.progress {
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 6px;
+  background: #ddd;
+  border-radius: 6px;
+}
+
+.fill {
+  height: 100%;
+  background: var(--green);
+  width: 0%;
+}
